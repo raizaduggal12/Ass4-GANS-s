@@ -3,7 +3,7 @@
 
 ---
 
-## 📌 Objective
+## Objective
 
 The objective of this assignment is to learn the probability density function (PDF) of an unknown transformed random variable using a Generative Adversarial Network (GAN), without assuming any parametric distribution.
 
@@ -11,7 +11,7 @@ We consider **NO₂ concentration** as the feature \( x \), apply a nonlinear tr
 
 ---
 
-## 📊 Dataset
+## Dataset
 
 **India Air Quality Dataset**  
 Source: Kaggle  
@@ -21,13 +21,13 @@ Feature used: **NO₂ concentration**
 
 ---
 
-## 🔁 Step 1: Nonlinear Transformation
+## Step 1: Nonlinear Transformation
 
 Each NO₂ value \( x \) is transformed as:
 
-\[
+$$
 z = x + a_r \sin(b_r x)
-\]
+$$
 
 Where:
 
@@ -35,7 +35,7 @@ Where:
 - \( b_r = 0.3 ((r \mod 5) + 1) \)
 - \( r = 102303068 \)
 
-### ✅ Computed Parameters
+### Computed Parameters
 a_r = 1.0
 b_r = 1.2
 
@@ -44,7 +44,7 @@ The transformation introduces nonlinear distortion into the original distributio
 
 ---
 
-## 🤖 Step 2: GAN Architecture
+## Step 2: GAN Architecture
 
 The GAN learns the distribution of the transformed variable \( z \).
 
@@ -77,7 +77,7 @@ Epochs: 2000
 
 ---
 
-## 📈 Step 3: PDF Estimation
+## Step 3: PDF Estimation
 
 After training:
 
@@ -87,7 +87,7 @@ After training:
 
 ---
 
-## 📊 Distribution Comparison
+## Distribution Comparison
 
 Below is the comparison between:
 
@@ -95,7 +95,5 @@ Below is the comparison between:
 - GAN estimated PDF
 
 ![PDF Comparison](comparison_graph.png)
-
-> ⚠️ Upload your saved comparison plot image as `comparison_graph.png` in the repository.
 
 ---
